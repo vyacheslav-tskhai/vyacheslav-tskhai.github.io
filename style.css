@@ -40,44 +40,6 @@ a {
   padding: 0 24px;
 }
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #ffffff;
-  border-bottom: 1px solid var(--border);
-  z-index: 1000;
-}
-
-.header .container {
-  height: 72px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.nav a {
-  color: var(--muted);
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.nav a:hover {
-  color: var(--text);
-}
 
 section {
   padding: 96px 0;
