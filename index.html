@@ -92,10 +92,10 @@
   <body>
     
 <!-- ================= HEADER (ШАПКА) ================= -->
-<header style="background-color: #ffffff; padding: 20px 0; border-bottom: 1px solid #e5e7eb;">
+<header style="position: fixed; top: 0; left: 0; width: 100%; background-color: #ffffff; padding: 15px 0; border-bottom: 1px solid #e5e7eb; z-index: 1000;">
   <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 800px; margin: 0 auto; padding: 0 20px;">
 
-    <!-- ЛОГОТИП -->
+    <!-- ЛОГОТИП (Кликабельный, ведет на главную) -->
     <a href="/" style="text-decoration: none; font-weight: 700; font-size: 1.1rem; color: #1f2937;">
       Вячеслав Цхай
     </a>
@@ -103,8 +103,9 @@
     <!-- МЕНЮ НАВИГАЦИИ -->
     <nav style="display: flex; gap: 25px; align-items: center;">
       
-      <a href="/" style="text-decoration: none; color: #4b5563; font-weight: 500; transition: color 0.2s;">
-        Главная
+      <!-- Заменили Главная на Аудит -->
+      <a href="https://vyacheslavtskhai.ru/audit" style="text-decoration: none; color: #4b5563; font-weight: 500; transition: color 0.2s;">
+        Аудит
       </a>
       
       <a href="https://vyacheslavtskhai.ru/blog" style="text-decoration: none; color: #4b5563; font-weight: 500; transition: color 0.2s;">
