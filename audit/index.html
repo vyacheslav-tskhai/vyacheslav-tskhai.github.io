@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!-- 
+1 УРОВЕНЬ ВЛОЖЕННОСТИ HTML
+-->
+<html lang="ru"> 
+
+<!-- 
+2 УРОВЕНЬ ВЛОЖЕННОСТИ HEAD
+-->
+<head>
+  
+  <meta charset="UTF-8" />
+
+  <!-- мобильная адаптивность -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- фавиконка -->
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <!-- SEO title description -->
+  <title>Аудит и статистика — Вячеслав Цхай</title>
+  <meta
+    name="description"
+    content="Мониторинг посещаемости, технические аудиты и аналитика сайта Вячеслава Цхая."
+  />
+
+  <!-- Open Graph для соцсетей -->
+  <meta property="og:title" content="Аудит и статистика — Вячеслав Цхай" />
+  <meta
+    property="og:description"
+    content="Мониторинг посещаемости, технические аудиты и аналитика."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../images/preview.jpg" />
+
+  <!-- Каноникал -->
+  <link rel="canonical" href="https://vyacheslavtskhai.ru/audit/" />
+
+  <!-- Шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Стили -->
+  <link rel="stylesheet" href="../style.css">
+  
+</head>
+
+<!-- 
+2 УРОВЕНЬ ВЛОЖЕННОСТИ BODY
+-->
+<body>
+
+  <!-- ЗАКРЕПЛЕННЫЙ ХЭДЕР -->
+  <header style="position: fixed; top: 0; left: 0; width: 100%; background-color: #ffffff; padding: 15px 0; border-bottom: 1px solid #e5e7eb; z-index: 1000;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 800px; margin: 0 auto; padding: 0 20px;">
+      <a href="/" style="text-decoration: none; font-weight: 700; font-size: 1.1rem; color: #1f2937;">
+        Вячеслав Цхай
+      </a>
+      <nav style="display: flex; gap: 25px; align-items: center;">
+        <a href="/" style="text-decoration: none; color: #4b5563; font-weight: 500;">Главная</a>
+        <a href="https://vyacheslavtskhai.ru/blog" style="text-decoration: none; color: #4b5563; font-weight: 500;">Блог</a>
+        <a href="https://vyacheslavtskhai.ru/contacts" style="text-decoration: none; color: #4b5563; font-weight: 500;">Контакты</a>
+        <a href="https://vyacheslavtskhai.ru/audit" style="text-decoration: none; color: #2563eb; font-weight: 600;">Аудит</a>
+        <a href="https://t.me/vtskhai" target="_blank" rel="noopener noreferrer" 
+           style="text-decoration: none; background-color: #2563eb; color: #ffffff; padding: 8px 18px; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">
+          Telegram
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 3 УРОВЕНЬ MAIN (с отступом, чтобы не перекрывать хэдер) -->
+  <main style="padding-top: 80px;">
+
+    <section class="hero">
+      <div class="container">
+
+        <div class="hero-content" style="text-align: center;">
+          
+          <div class="name" style="font-size: 2.5rem; margin-bottom: 10px;">
+            Аудит и статистика
+          </div>
+
+          <h1 style="font-size: 1.5rem; margin-bottom: 20px;">
+            Я слежу за посещаемостью сайта и его техническим состоянием.
+          </h1>
+
+          <p class="hero-description" style="margin-bottom: 40px;">
+            Здесь будут отображаться основные метрики, данные счетчиков и результаты мониторинга.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- БЛОК СО СЧЕТЧИКАМИ И АНАЛИТИКОЙ             -->
+    <!-- ========================================== -->
+    <section class="divider">
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Подключенные сервисы</h2>
+          <p class="section-description">
+            Инструменты для сбора и анализа данных.
+          </p>
+        </div>
+
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+
+          <!-- Карточка Яндекс.Метрика -->
+          <div class="card" style="text-align: center; padding: 30px;">
+            <div style="font-size: 3rem; margin-bottom: 15px;">📈</div>
+            <div class="card-title" style="margin-bottom: 10px;">Яндекс.Метрика</div>
+            <div class="card-description">
+              Следит за количеством посетителей, их действиями и источниками переходов.
+            </div>
+            <a href="https://metrika.yandex.ru" target="_blank" style="display: inline-block; margin-top: 15px; color: #2563eb; text-decoration: none;">Перейти к панели →</a>
+          </div>
+
+          <!-- Карточка Google Analytics -->
+          <div class="card" style="text-align: center; padding: 30px;">
+            <div style="font-size: 3rem; margin-bottom: 15px;">🔎</div>
+            <div class="card-title" style="margin-bottom: 10px;">Google Analytics</div>
+            <div class="card-description">
+              Анализирует поведение пользователей, конверсии и эффективность маркетинга.
+            </div>
+            <a href="https://analytics.google.com" target="_blank" style="display: inline-block; margin-top: 15px; color: #2563eb; text-decoration: none;">Перейти к панели →</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- БЛОК ДЛЯ БУДУЩИХ ОТЧЕТОВ                   -->
+    <!-- ========================================== -->
+    <section class="divider" style="background-color: transparent; padding-bottom: 40px;">
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Технический аудит (скоро)</h2>
+          <p class="section-description">
+            Здесь появятся регулярные отчеты о работе сайта.
+          </p>
+        </div>
+
+        <div style="background: #f9fafb; padding: 40px; border-radius: 12px; text-align: center; border: 2px dashed #d1d5db;">
+          <p style="margin: 0; color: #6b7280; font-size: 1.1rem;">
+            ⏳ Раздел находится в разработке. Скоро здесь будут появляться отчеты о скорости загрузки, SEO-аудит и данные о доступности.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- 3 УРОВЕНЬ FOOTER (ПОДВАЛ)                   -->
+  <!-- ========================================== -->
+  <footer class="divider" style="margin-top: 20px;">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="/">Главная</a>
+          <a href="/blog/">Блог</a>
+          <a href="/contacts/">Контакты</a>
+          <a href="/audit/">Аудит</a>
+          <a href="https://t.me/vtskhai" target="_blank" rel="noopener noreferrer">Telegram</a>
+        </div>
+        <div class="copyright">
+          © 2026 Вячеслав Цхай
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
