@@ -158,11 +158,10 @@ h2 {
 /* =========================================================
    8. CARDS (универсальные)
 ========================================================= */
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {
@@ -302,4 +301,7 @@ footer {
     flex-direction: column;
     gap: 12px;
   }
+.container {
+  padding: 0 16px;
+}
 }
