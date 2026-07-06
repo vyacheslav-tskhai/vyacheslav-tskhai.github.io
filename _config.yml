@@ -1,1 +1,8 @@
-title: My Site
+title: Вячеслав Цхай — Маркетолог
+description: Исследую рынок, продукт и маркетинг, чтобы находить ограничения роста, выбирать наиболее эффективные решения и превращать их в измеримый результат.
+url: "https://vyacheslavtskhai.ru"
+
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
