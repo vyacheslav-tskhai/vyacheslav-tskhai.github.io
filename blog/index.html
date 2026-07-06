@@ -1,93 +1,14 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="../images/favicon.png">
-  
-  <title>Блог — Вячеслав Цхай</title>
-  <meta name="description" content="Раздел блога. Скоро здесь появятся статьи, заметки и исследования." />
-  
-  <meta property="og:title" content="Блог — Вячеслав Цхай" />
-  <meta property="og:description" content="Раздел блога. Скоро здесь появятся статьи, заметки и исследования." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="../images/preview.jpg" />
-  
-  <link rel="canonical" href="https://vyacheslavtskhai.ru/blog/" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
+---
+layout: default
+title: Blog
+---
 
-  <!-- ХЭДЕР -->
-  <header style="position: fixed; top: 0; left: 0; width: 100%; background-color: #ffffff; padding: 15px 0; border-bottom: 1px solid #e5e7eb; z-index: 1000;">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 800px; margin: 0 auto; padding: 0 20px;">
-      <a href="/" style="text-decoration: none; font-weight: 700; font-size: 1.1rem; color: #1f2937;">Вячеслав Цхай</a>
-      <nav style="display: flex; gap: 25px; align-items: center;">
-        <a href="https://vyacheslavtskhai.ru/audit" style="text-decoration: none; color: #4b5563; font-weight: 500;">Аудит</a>
-        <a href="https://vyacheslavtskhai.ru/blog" style="text-decoration: none; color: #2563eb; font-weight: 600;">Блог</a>
-        <a href="https://vyacheslavtskhai.ru/contacts" style="text-decoration: none; color: #4b5563; font-weight: 500;">Контакты</a>
-        <a href="https://t.me/vtskhai" target="_blank" rel="noopener noreferrer" 
-           style="text-decoration: none; background-color: #2563eb; color: #ffffff; padding: 8px 18px; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Telegram</a>
-      </nav>
-    </div>
-  </header>
+<h1>Blog</h1>
 
-  <!-- ОСНОВНОЙ КОНТЕНТ -->
-  <main style="padding-top: 100px; padding-bottom: 60px;">
-    <div class="container" style="text-align: center; max-width: 700px;">
-      
-      <div style="font-size: 4rem; margin-bottom: 20px;">✍️</div>
-      
-      <h1 style="font-size: 2.5rem; margin-bottom: 15px; line-height: 1.3;">
-        Блог
-      </h1>
-      
-      <p style="font-size: 1.2rem; color: #6b7280; line-height: 1.6; margin-bottom: 30px;">
-        Раздел находится в разработке. 
-      </p>
-      
-      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <a href="/" style="text-decoration: none; background-color: #e5e7eb; color: #1f2937; padding: 10px 24px; border-radius: 8px; font-weight: 600;">← На главную</a>
-        <a href="https://t.me/vtskhai" target="_blank" style="text-decoration: none; background-color: #2563eb; color: #ffffff; padding: 10px 24px; border-radius: 8px; font-weight: 600;">Написать в Telegram</a>
-      </div>
-      
-    </div>
-  </main>
-
-  <!-- ФУТЕР -->
-  <footer class="divider" style="padding: 30px 0; border-top: 1px solid #e5e7eb;">
-    <div class="container" style="text-align: center;">
-      <div class="footer-links" style="margin-bottom: 15px;">
-        <a href="/" style="text-decoration: none; color: #4b5563; margin: 0 10px;">Главная</a>
-        <a href="/audit/" style="text-decoration: none; color: #4b5563; margin: 0 10px;">Аудит</a>
-        <a href="/blog/" style="text-decoration: none; color: #4b5563; margin: 0 10px;">Блог</a>
-        <a href="/contacts/" style="text-decoration: none; color: #4b5563; margin: 0 10px;">Контакты</a>
-      </div>
-      <div class="copyright" style="color: #9ca3af; font-size: 0.9rem;">© 2026 Вячеслав Цхай</div>
-    </div>
-  </footer>
-
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109061362', 'ym');
-
-    ym(109061362, 'init', {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/109061362" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-
-
-  
-</body>
-</html>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
