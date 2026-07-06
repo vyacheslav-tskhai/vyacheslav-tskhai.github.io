@@ -121,11 +121,14 @@
 
 <!-- ========================================== -->
 <!-- СКРИПТ ДЛЯ ОТПРАВКИ В TELEGRAM              -->
-<!-- ВСТАВЬТЕ ТОКЕН И ID НИЖЕ                  -->
+<!-- ТОКЕН И ID БЕРУТСЯ ИЗ ФАЙЛА config.js       -->
 <!-- ========================================== -->
-<script>
+
+<!-- 1. Сначала подключаем файл с токеном (его нет на GitHub, он у вас локально) -->
 <script src="config.js"></script>
 
+<!-- 2. Запускаем логику отправки -->
+<script>
   document.getElementById('auditForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -140,7 +143,7 @@
     text += `<b>Контакт:</b> ${contact}\n`;
     text += `<b>Сообщение:</b>\n${message}`;
 
-    // Отправляем запрос в Telegram API
+    // Отправляем запрос в Telegram API (используем переменные из config.js)
     fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -163,6 +166,7 @@
     });
   });
 </script>
+<!-- ========================================== -->
 
 </body>
 </html>
