@@ -99,9 +99,8 @@ section {
 }
 
 h1 {
-  font-size: clamp(42px, 7vw, 72px);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
+  font-size: 36px;
+  line-height: 1.15;
   font-weight: 800;
   margin-bottom: 24px;
 }
