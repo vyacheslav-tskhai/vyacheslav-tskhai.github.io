@@ -38,7 +38,9 @@
 
   <!-- ОСНОВНОЙ КОНТЕНТ -->
   <main style="padding-top: 100px; padding-bottom: 60px;">
-    <div class="container" style="text-align: center; max-width: 700px;">
+    
+    <!-- БЛОК ЗАГЛУШКИ О РАЗРАБОТКЕ -->
+    <div class="container" style="text-align: center; max-width: 700px; margin-bottom: 50px;">
       
       <div style="font-size: 4rem; margin-bottom: 20px;">📊</div>
       
@@ -56,6 +58,52 @@
       </div>
       
     </div>
+
+    <!-- ========================================== -->
+    <!-- БЛОК ФОРМЫ ЗАЯВКИ (под заглушкой)          -->
+    <!-- ========================================== -->
+    <div class="container" style="max-width: 700px; margin: 0 auto; padding: 0 20px;">
+      <div style="background-color: #f9fafb; padding: 40px; border-radius: 16px; border: 1px solid #e5e7eb;">
+        
+        <div style="text-align: center; margin-bottom: 30px;">
+          <h2 style="font-size: 1.8rem; margin-bottom: 10px; color: #1f2937;">Оставить заявку</h2>
+          <p style="color: #6b7280; font-size: 1rem;">Заполните форму, и я свяжусь с вами, как только будет готова информация.</p>
+        </div>
+
+        <!-- Форма -->
+        <form id="auditForm">
+          
+          <div style="margin-bottom: 20px;">
+            <label for="name" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Ваше имя</label>
+            <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required 
+                   style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 1rem; font-family: inherit;">
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <label for="contact" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Телефон или Email</label>
+            <input type="text" id="contact" name="contact" placeholder="+7 999 123-45-67" required 
+                   style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 1rem; font-family: inherit;">
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <label for="message" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Сообщение</label>
+            <textarea id="message" name="message" rows="4" placeholder="Что вас интересует?" required 
+                      style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 1rem; font-family: inherit; resize: vertical;"></textarea>
+          </div>
+
+          <button type="submit" 
+                  style="width: 100%; padding: 14px; background-color: #2563eb; color: #ffffff; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: background-color 0.2s;">
+            Отправить заявку
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+    <!-- ========================================== -->
+    <!-- КОНЕЦ БЛОКА ФОРМЫ                         -->
+    <!-- ========================================== -->
+
   </main>
 
   <!-- ФУТЕР -->
@@ -70,6 +118,53 @@
       <div class="copyright" style="color: #9ca3af; font-size: 0.9rem;">© 2026 Вячеслав Цхай</div>
     </div>
   </footer>
+
+<!-- ========================================== -->
+<!-- СКРИПТ ДЛЯ ОТПРАВКИ В TELEGRAM              -->
+<!-- ВСТАВЬТЕ ТОКЕН И ID НИЖЕ                  -->
+<!-- ========================================== -->
+<script>
+  // 👇 ВСТАВЬТЕ СЮДА ВАШИ ДАННЫЕ
+  const BOT_TOKEN = '8875238664:AAE_OZISNY1M-1LYuSoZzw6v5IeHBuaG4x8'; // Токен вашего бота
+  const CHAT_ID = '159819851'; // Ваш Telegram ID
+
+  document.getElementById('auditForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Собираем данные из формы
+    let name = document.getElementById('name').value;
+    let contact = document.getElementById('contact').value;
+    let message = document.getElementById('message').value;
+
+    // Готовим красивый текст для Telegram
+    let text = `<b>📋 Новая заявка на Аудит с сайта!</b>\n\n`;
+    text += `<b>Имя:</b> ${name}\n`;
+    text += `<b>Контакт:</b> ${contact}\n`;
+    text += `<b>Сообщение:</b>\n${message}`;
+
+    // Отправляем запрос в Telegram API
+    fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: CHAT_ID,
+        text: text,
+        parse_mode: 'HTML'
+      })
+    })
+    .then(response => {
+      if (response.ok) {
+        // Если всё ок, перенаправляем на страницу благодарности
+        window.location.href = '/thanks.html';
+      } else {
+        alert('❌ Ошибка отправки. Попробуйте позже или напишите мне напрямую в Telegram.');
+      }
+    })
+    .catch(error => {
+      alert('❌ Ошибка соединения. Проверьте интернет.');
+    });
+  });
+</script>
 
 </body>
 </html>
