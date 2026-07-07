@@ -1,11 +1,12 @@
 <!-- ================= ОСНОВА HTML-ДОКУМЕНТА ================= -->
 <!DOCTYPE html>
-<!-- Язык страницы -->
+<!-- Язык сайта: русский -->
 <html lang="ru">
 
 
-  
-  <!-- Всё внутри <head> говорит браузеру: "Как правильно показать этот сайт?" -->
+<!-- HEAD:
+     служебная информация страницы:
+     SEO, настройки браузера и подключение ресурсов -->
 <head>
 
   <!-- Кодировка страницы -->
@@ -35,34 +36,62 @@
     href="https://vyacheslavtskhai.ru{{ page.url }}"
   >
 
-
-  <!-- Open Graph:
-       отвечает за отображение ссылки
-       в Telegram, VK, LinkedIn и других сервисах -->
-
-  <meta 
-    property="og:title"
-    content="{{ page.title }}"
-  >
-  <meta
-    property="og:description"
-    content="{{ page.description }}"
-  >
-  <meta
-    property="og:type"
-    content="website"
-  >
-  <meta
-    property="og:image"
-    content="https://vyacheslavtskhai.ru/images/preview.jpg"
-  >
-
   
+<!-- Open Graph:
+     отвечает за отображение ссылки
+     в Telegram, VK, LinkedIn и других сервисах -->
+
+
+<!-- Заголовок страницы -->
+<meta 
+  property="og:title"
+  content="{{ page.title }}"
+>
+
+<!-- Описание страницы -->
+<meta
+  property="og:description"
+  content="{{ page.description }}"
+>
+
+<!-- URL страницы -->
+<meta
+  property="og:url"
+  content="https://vyacheslavtskhai.ru{{ page.url }}"
+>
+
+<!-- Тип страницы:
+     website — обычная страница сайта -->
+<meta
+  property="og:type"
+  content="website"
+>
+
+<!-- Картинка для карточки ссылки -->
+<meta
+  property="og:image"
+  content="https://vyacheslavtskhai.ru/images/preview.jpg"
+>
+
+
+
   <!-- Иконка сайта -->
   <link 
     rel="icon"
     type="image/png"
     href="/images/favicon.png"
+  >
+
+
+  <!-- Шрифт сайта:
+       подключает Inter из Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
   >
 
 
