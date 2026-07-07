@@ -1,286 +1,110 @@
-<!DOCTYPE html>
-<!-- 
-1 УРОВЕНЬ ВЛОЖЕННОСТИ HTML
--->
-<html lang="ru"> 
-<!-- шаблон комментария-невидимки -->
+---
+layout: default
+title: "Главная"
+description: "Исследую рынок, продукт и маркетинг, чтобы находить ограничения роста и превращать их в измеримый результат."
+---
 
-<!-- 
-2 УРОВЕНЬ ВЛОЖЕННОСТИ HEAD
--->
-<head>
-  
-  <meta charset="UTF-8" />
+<main>
 
-  <!-- 
-  мобильная адаптивность
-  -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- 
-  фавиконка
-  -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-  
-  <!-- 
-  SEO title description для поисковиков
-  -->
-  <title>Вячеслав Цхай — Маркетолог</title>
-  <meta
-    name="description"
-    content="Исследую рынок, продукт и маркетинг, чтобы находить ограничения роста, выбирать наиболее эффективные решения и превращать их в измеримый результат."
-  />
-
-  <!-- 
-  SEO open graph для соцсетей
-  title description
-  тип вебсайт
-  картинка
-  -->
-  <meta property="og:title" content="Вячеслав Цхай — Маркетолог" />
-  <meta
-    property="og:description"
-    content="Исследую рынок, продукт и маркетинг, чтобы находить ограничения роста, выбирать наиболее эффективные решения и превращать их в измеримый результат."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="preview.jpg" />
-
- <!-- 
-  каноникал
-  -->
-<link rel="canonical" href="https://vyacheslavtskhai.ru" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-
- <!-- 
-  Иди в корень сайта, найди файл style.css и возьми оттуда все правила красоты (цвета, шрифты, отступы)
-  -->
-<link rel="stylesheet" href="/style.css">
-  
-</head>
-<!-- 
-2 УРОВЕНЬ ВЛОЖЕННОСТИ HEAD
--->
-
-<!-- 
-2 УРОВЕНЬ ВЛОЖЕННОСТИ BODY
--->
-  <body>
-    
-<!-- ================= HEADER (ШАПКА) ================= -->
-<header style="position: fixed; top: 0; left: 0; width: 100%; background-color: #ffffff; padding: 15px 0; border-bottom: 1px solid #e5e7eb; z-index: 1000;">
-  <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 800px; margin: 0 auto; padding: 0 20px;">
-
-    <!-- ЛОГОТИП (Кликабельный, ведет на главную) -->
-    <a href="/" style="text-decoration: none; font-weight: 700; font-size: 1.1rem; color: #1f2937;">
-      Вячеслав Цхай
-    </a>
-
-    <!-- МЕНЮ НАВИГАЦИИ -->
-    <nav style="display: flex; gap: 25px; align-items: center;">
-      
-      <a href="https://vyacheslavtskhai.ru/audit" style="text-decoration: none; color: #4b5563; font-weight: 500; transition: color 0.2s;">
-        Аудит
-      </a>
-      
-      <a href="https://vyacheslavtskhai.ru/blog" style="text-decoration: none; color: #4b5563; font-weight: 500; transition: color 0.2s;">
-        Блог
-      </a>
-      
-      <a href="https://vyacheslavtskhai.ru/contacts" style="text-decoration: none; color: #4b5563; font-weight: 500; transition: color 0.2s;">
-        Контакты
-      </a>
-
-      <!-- Кнопка Telegram -->
-      <a href="https://t.me/vtskhai" target="_blank" rel="noopener noreferrer" 
-         style="text-decoration: none; background-color: #2563eb; color: #ffffff; padding: 8px 18px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; transition: background-color 0.2s;">
-        Telegram
-      </a>
-
-    </nav>
-
-  </div>
-</header>
-<!-- ================= КОНЕЦ HEADER ================= -->
-
-    
-<!-- 
-3 УРОВЕНЬ ВЛОЖЕННОСТИ MAIN (Главная часть)
--->
-  <main>
-
-    <section class="hero">
-      <div class="container">
-
-        <img
-          src="images/photo.jpg"
-          alt="Вячеслав Цхай"
-          class="avatar"
-        />
-
-        <div class="hero-content">
-
-          <!-- Убрали дублирующийся текст "Вячеслав Цхай" под фотографией -->
-
-          <h1>
-            Помогаю превращать неопределенность в понятные маркетинговые решения.
-          </h1>
-
-          <p class="hero-description">
-            Исследую рынок, продукт и маркетинг, чтобы находить ограничения роста, выбирать наиболее эффективные решения и превращать их в измеримый результат.
-          </p>
-
-          <a
-            href="https://t.me/vtskhai"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="button"
-          >
-            Написать в Telegram
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="divider">
-      <div class="container">
-
-        <div class="section-header">
-          <h2>Материалы</h2>
-
-          <p class="section-description">
-              Опыт, исследования и подход к работе.
-          </p>
-        </div>
-
-        <div class="grid">
-
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="card"
-          >
-            <div class="card-title">
-              Опыт
-            </div>
-
-            <div class="card-description">
-              Навыки, проекты и результаты.
-            </div>
-          </a>
-
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="card"
-          >
-            <div class="card-title">
-              Исследования
-            </div>
-
-            <div class="card-description">
-              Разборы, исследования и заметки.
-            </div>
-          </a>
-
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="card"
-          >
-            <div class="card-title">
-              Подход
-            </div>
-
-            <div class="card-description">
-              Принципы и методы работы.
-            </div>
-          </a>
-
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-<!-- 
-3 УРОВЕНЬ ВЛОЖЕННОСТИ MAIN (Главная часть)
--->
-    
-<!-- 
-3 УРОВЕНЬ ВЛОЖЕННОСТИ FOOTER (Подвал)
--->
- <footer class="divider">
+<section class="hero">
   <div class="container">
 
-    <div class="footer-content">
+    <img
+      src="/images/photo.jpg"
+      alt="Вячеслав Цхай"
+      class="avatar"
+    />
 
-      <div class="footer-links">
+    <div class="hero-content">
 
-        <a href="/audit/">Аудит</a>
+      <h1>
+        Помогаю превращать неопределенность в понятные маркетинговые решения.
+      </h1>
 
-        <a href="/blog/">Блог</a>
+      <p class="hero-description">
+        Исследую рынок, продукт и маркетинг, чтобы находить ограничения роста,
+        выбирать наиболее эффективные решения и превращать их в измеримый результат.
+      </p>
 
-        <a href="/contacts/">Контакты</a>
-
-        <a
-          href="https://t.me/vtskhai"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Telegram
-        </a>
-
-      </div>
-
-      <div class="copyright">
-        © 2026 Вячеслав Цхай
-      </div>
+      <a
+        href="https://t.me/vtskhai"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button"
+      >
+        Написать в Telegram
+      </a>
 
     </div>
 
   </div>
-   
-</footer>
-<!-- 
-3 УРОВЕНЬ ВЛОЖЕННОСТИ FOOTER (Подвал)
--->
+</section>
 
-<!-- ========================================== -->
-<!-- КОД ЯНДЕКС МЕТРИКИ (Вставлен перед </body>) -->
-<!-- ========================================== -->
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109061362', 'ym');
 
-    ym(109061362, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/109061362" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-<!-- ========================================== -->
+<section class="divider">
 
-</body>
-<!-- 
-2 УРОВЕНЬ ВЛОЖЕННОСТИ BODY
--->  
+  <div class="container">
 
-<!-- 
-1 УРОВЕНЬ ВЛОЖЕННОСТИ HTML
--->  
-</html>
+    <div class="section-header">
+
+      <h2>
+        Материалы
+      </h2>
+
+      <p class="section-description">
+        Опыт, исследования и подход к работе.
+      </p>
+
+    </div>
+
+
+    <div class="grid">
+
+
+      <a href="/contacts/" class="card">
+
+        <div class="card-title">
+          Опыт
+        </div>
+
+        <div class="card-description">
+          Навыки, проекты и результаты.
+        </div>
+
+      </a>
+
+
+      <a href="/blog/" class="card">
+
+        <div class="card-title">
+          Исследования
+        </div>
+
+        <div class="card-description">
+          Разборы, исследования и заметки.
+        </div>
+
+      </a>
+
+
+      <a href="#" class="card">
+
+        <div class="card-title">
+          Подход
+        </div>
+
+        <div class="card-description">
+          Принципы и методы работы.
+        </div>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
