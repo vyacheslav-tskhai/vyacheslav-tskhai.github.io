@@ -244,7 +244,21 @@ section {
 
 }
 
+/* Кнопка мобильного меню */
 
+.menu-button {
+
+  display: none;
+
+  background: none;
+
+  border: none;
+
+  font-size: 24px;
+
+  cursor: pointer;
+
+}
 
 .header__inner {
 
@@ -411,7 +425,7 @@ section {
 
 .hero {
 
-  min-height: 90vh;
+  min-height: 75vh;
 
 
   display: flex;
@@ -433,10 +447,10 @@ section {
 
 .avatar {
 
-  width: 96px;
+  width:112px;
 
 
-  height: 96px;
+  height: 112px;
 
 
   border-radius: 50%;
@@ -462,7 +476,7 @@ h1 {
   line-height: 1.15;
 
 
-  font-weight: 800;
+  font-weight: 700;
 
 
   margin-bottom: 24px;
@@ -790,37 +804,35 @@ h2 {
 
 
 
-  .header__inner {
+ .header__inner {
 
+  height: 72px;
 
-    /* Header становится вертикальным */
+  flex-direction: row;
 
-    height: auto;
+  justify-content: space-between;
 
+  align-items: center;
 
-    padding: 16px 0;
-
-
-    flex-direction: column;
-
-
-    gap: 16px;
-
-  }
+}
 
 
 
-  .nav {
+/* На мобильном меню скрыто,
+   вместо него показываем кнопку */
 
-    flex-wrap: wrap;
+.nav {
+
+  display: none;
+
+}
 
 
-    justify-content: center;
+.menu-button {
 
+  display: block;
 
-    gap: 16px;
-
-  }
+}
 
 
 
