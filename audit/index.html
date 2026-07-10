@@ -1,129 +1,94 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="../images/favicon.png">
-  
-  <title>Аудит — Вячеслав Цхай</title>
-  <meta name="description" content="Страница аудита и аналитики. Скоро здесь появится подробная информация." />
-  
-  <meta property="og:title" content="Аудит — Вячеслав Цхай" />
-  <meta property="og:description" content="Страница аудита и аналитики. Скоро здесь появится подробная информация." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="../images/preview.jpg" />
-  
-  <link rel="canonical" href="https://vyacheslavtskhai.ru/audit/" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
+---
+layout: default
+title: Аудит — Вячеслав Цхай
+description: Аудит сайта и маркетинга.
+permalink: /audit/
+---
 
-  <!-- ХЭДЕР -->
-  <header style="position: fixed; top: 0; left: 0; width: 100%; background-color: #ffffff; padding: 15px 0; border-bottom: 1px solid #e5e7eb; z-index: 1000;">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 800px; margin: 0 auto; padding: 0 20px;">
-      <a href="/" style="text-decoration: none; font-weight: 700; font-size: 1.1rem; color: #1f2937;">Вячеслав Цхай</a>
-      <nav style="display: flex; gap: 25px; align-items: center;">
-        <a href="https://vyacheslavtskhai.ru/audit" style="text-decoration: none; color: #2563eb; font-weight: 600;">Аудит</a>
-        <a href="https://vyacheslavtskhai.ru/blog" style="text-decoration: none; color: #4b5563; font-weight: 500;">Блог</a>
-        <a href="https://vyacheslavtskhai.ru/contacts" style="text-decoration: none; color: #4b5563; font-weight: 500;">Контакты</a>
-        <a href="https://t.me/vtskhai" target="_blank" rel="noopener noreferrer" 
-           style="text-decoration: none; background-color: #2563eb; color: #ffffff; padding: 8px 18px; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">Telegram</a>
-      </nav>
-    </div>
-  </header> 
+<section style="padding:60px 0 80px;">
+  <div class="container" style="max-width:700px;">
 
-  <!-- ОСНОВНОЙ КОНТЕНТ -->
-  <main style="padding-top: 100px; padding-bottom: 60px;">
-    
-    <!-- БЛОК ЗАГЛУШКИ О РАЗРАБОТКЕ -->
-    <div class="container" style="text-align: center; max-width: 700px; margin-bottom: 50px;">
-      
-      <div style="font-size: 4rem; margin-bottom: 20px;">📊</div>
-      
-      <h1 style="font-size: 2.5rem; margin-bottom: 15px; line-height: 1.3;">
+    <div style="text-align:center;margin-bottom:50px;">
+
+      <div style="font-size:4rem;margin-bottom:20px;">📊</div>
+
+      <h1 style="margin-bottom:16px;">
         Аудит
       </h1>
-      
-      <p style="font-size: 1.2rem; color: #6b7280; line-height: 1.6; margin-bottom: 30px;">
-        Раздел находится в разработке.
+
+      <p style="font-size:1.125rem;color:#6b7280;line-height:1.7;margin-bottom:32px;">
+        Страница находится в разработке.
+        Если вы хотите обсудить аудит сайта или маркетинга, заполните форму ниже.
       </p>
-      
-      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <a href="/" style="text-decoration: none; background-color: #e5e7eb; color: #1f2937; padding: 10px 24px; border-radius: 8px; font-weight: 600;">← На главную</a>
-        <a href="https://t.me/vtskhai" target="_blank" style="text-decoration: none; background-color: #2563eb; color: #ffffff; padding: 10px 24px; border-radius: 8px; font-weight: 600;">Написать в Telegram</a>
-      </div>
-      
+
     </div>
 
-    <!-- ========================================== -->
-    <!-- БЛОК ФОРМЫ ЗАЯВКИ (под заглушкой)          -->
-    <!-- ========================================== -->
-    <div class="container" style="max-width: 700px; margin: 0 auto; padding: 0 20px;">
-      <div style="background-color: #f9fafb; padding: 40px; border-radius: 16px; border: 1px solid #e5e7eb;">
-        
-        <div style="text-align: center; margin-bottom: 30px;">
-          <h2 style="font-size: 1.8rem; margin-bottom: 10px; color: #1f2937;">Оставить заявку</h2>
-          <p style="color: #6b7280; font-size: 1rem;">Заполните форму, и я свяжусь с вами, как только будет готова информация.</p>
+    <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:16px;padding:40px;">
+
+      <div style="text-align:center;margin-bottom:30px;">
+        <h2 style="margin-bottom:10px;">
+          Оставить заявку
+        </h2>
+
+        <p style="color:#6b7280;">
+          Я свяжусь с вами в ближайшее время.
+        </p>
+      </div>
+
+      <form id="auditForm">
+
+        <div style="margin-bottom:20px;">
+          <label for="name">Ваше имя</label>
+
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            placeholder="Как к вам обращаться?"
+            style="width:100%;padding:12px;border:1px solid #d1d5db;border-radius:8px;font:inherit;">
         </div>
 
-        <!-- Форма -->
-        <form id="auditForm">
-          
-          <div style="margin-bottom: 20px;">
-            <label for="name" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Ваше имя</label>
-            <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required 
-                   style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 1rem; font-family: inherit;">
-          </div>
+        <div style="margin-bottom:20px;">
+          <label for="contact">Как с вами связаться</label>
 
-          <div style="margin-bottom: 20px;">
-            <label for="contact" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Телефон или Email</label>
-            <input type="text" id="contact" name="contact" placeholder="+7 999 123-45-67" required 
-                   style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 1rem; font-family: inherit;">
-          </div>
+          <input
+            id="contact"
+            name="contact"
+            type="text"
+            required
+            placeholder="Telegram, Email или телефон"
+            style="width:100%;padding:12px;border:1px solid #d1d5db;border-radius:8px;font:inherit;">
+        </div>
 
-          <div style="margin-bottom: 20px;">
-            <label for="message" style="display: block; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Сообщение</label>
-            <textarea id="message" name="message" rows="4" placeholder="Что вас интересует?" required 
-                      style="width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 1rem; font-family: inherit; resize: vertical;"></textarea>
-          </div>
+        <div style="margin-bottom:20px;">
+          <label for="message">Сообщение</label>
 
-          <button type="submit" 
-                  style="width: 100%; padding: 14px; background-color: #2563eb; color: #ffffff; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: background-color 0.2s;">
-            Отправить заявку
-          </button>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            placeholder="Коротко опишите задачу"
+            style="width:100%;padding:12px;border:1px solid #d1d5db;border-radius:8px;font:inherit;resize:vertical;"></textarea>
+        </div>
 
-        </form>
+        <button
+          type="submit"
+          class="btn btn--primary"
+          style="width:100%;">
+          Отправить заявку
+        </button>
 
-      </div>
+      </form>
+
     </div>
-    <!-- ========================================== -->
-    <!-- КОНЕЦ БЛОКА ФОРМЫ                         -->
-    <!-- ========================================== -->
 
-  </main>
-
-  <!-- ФУТЕР -->
-  <footer class="divider" style="padding: 30px 0; border-top: 1px solid #e5e7eb;">
-    <div class="container" style="text-align: center;">
-      <div class="footer-links" style="margin-bottom: 15px;">
-        <a href="/" style="text-decoration: none; color: #4b5563; margin: 0 10px;">Главная</a>
-        <a href="/audit/" style="text-decoration: none; color: #4b5563; margin: 0 10px;">Аудит</a>
-        <a href="/blog/" style="text-decoration: none; color: #4b5563; margin: 0 10px;">Блог</a>
-        <a href="/contacts/" style="text-decoration: none; color: #4b5563; margin: 0 10px;">Контакты</a>
-      </div>
-      <div class="copyright" style="color: #9ca3af; font-size: 0.9rem;">© 2026 Вячеслав Цхай</div>
-    </div>
-  </footer>
-
-
+  </div>
+</section>
 
 <script>
 document.getElementById("auditForm").addEventListener("submit", async function (e) {
-
     e.preventDefault();
 
     const button = this.querySelector("button");
@@ -135,62 +100,28 @@ document.getElementById("auditForm").addEventListener("submit", async function (
     const message = document.getElementById("message").value.trim();
 
     try {
-
         const response = await fetch("https://vyacheslav-form.slaik96.workers.dev", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({
-                name,
-                contact,
-                message
-            })
+            body: JSON.stringify({ name, contact, message })
         });
 
         const result = await response.json();
 
         if (result.success) {
-
             window.location.href = "/thanks.html";
-
         } else {
-
             alert(result.error || "Ошибка отправки");
-
         }
 
     } catch (err) {
-
         console.error(err);
         alert("Ошибка соединения с сервером.");
-
     }
 
     button.disabled = false;
     button.textContent = "Отправить заявку";
-
 });
 </script>
-
-  
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109061362', 'ym');
-
-    ym(109061362, 'init', {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/109061362" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-
-
-
-</body>
-</html>
