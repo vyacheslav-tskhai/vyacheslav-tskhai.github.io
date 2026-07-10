@@ -56,6 +56,43 @@
       </div>
       
     </div>
+  
+    <!-- БЛОК ФОРМЫ -->
+    <div class="container" style="max-width: 700px; margin: 50px auto 0; padding: 0 20px;">
+      <div style="background-color: #f9fafb; padding: 40px; border-radius: 16px; border: 1px solid #e5e7eb;">
+        <div style="text-align:center;margin-bottom:30px;">
+          <h2 style="font-size:1.8rem;margin-bottom:10px;color:#1f2937;">Оставить заявку</h2>
+          <p style="color:#6b7280;">Заполните форму, и я свяжусь с вами в ближайшее время.</p>
+        </div>
+
+        <form id="auditForm">
+          <div style="margin-bottom:20px;">
+            <label for="name" style="display:block;font-weight:600;margin-bottom:8px;">Ваше имя</label>
+            <input id="name" name="name" type="text" required placeholder="Как к вам обращаться?"
+            style="width:100%;padding:12px;border:1px solid #d1d5db;border-radius:8px;font-size:1rem;font-family:inherit;">
+          </div>
+
+          <div style="margin-bottom:20px;">
+            <label for="contact" style="display:block;font-weight:600;margin-bottom:8px;">Телефон или Email</label>
+            <input id="contact" name="contact" type="text" required placeholder="+7 999 123-45-67"
+            style="width:100%;padding:12px;border:1px solid #d1d5db;border-radius:8px;font-size:1rem;font-family:inherit;">
+          </div>
+
+          <div style="margin-bottom:20px;">
+            <label for="message" style="display:block;font-weight:600;margin-bottom:8px;">Сообщение</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Что вас интересует?"
+            style="width:100%;padding:12px;border:1px solid #d1d5db;border-radius:8px;font-size:1rem;font-family:inherit;resize:vertical;"></textarea>
+          </div>
+
+          <button type="submit"
+          style="width:100%;padding:14px;background:#2563eb;color:#fff;border:none;border-radius:8px;font-size:1.1rem;font-weight:600;">
+            Отправить заявку
+          </button>
+        </form>
+      </div>
+    </div>
+
+
   </main>
 
   <!-- ФУТЕР -->
@@ -90,5 +127,34 @@
 
 
   
+
+<script>
+document.getElementById("auditForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const button=this.querySelector("button");
+    button.disabled=true;
+    button.textContent="Отправка...";
+    const name=name=document.getElementById("name").value.trim();
+    const contact=document.getElementById("contact").value.trim();
+    const message=document.getElementById("message").value.trim();
+    try{
+        const response=await fetch("https://vyacheslav-form.slaik96.workers.dev",{
+            method:"POST",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify({name,contact,message})
+        });
+        const result=await response.json();
+        if(result.success){window.location.href="/thanks.html";}
+        else{alert(result.error||"Ошибка отправки");}
+    }catch(err){
+        console.error(err);
+        alert("Ошибка соединения с сервером.");
+    }
+    button.disabled=false;
+    button.textContent="Отправить заявку";
+});
+</script>
+
+
 </body>
 </html>
